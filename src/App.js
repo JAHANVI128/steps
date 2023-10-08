@@ -7,7 +7,8 @@ const messages = [
 ];
 
 export default function App(){
-  const [step,setStep] = useState(1)
+  const [step,setStep] = (useState(1))
+  const [test,setTest] = useState({name: "Jahanvi"});
   // console.log(arr);
   
   // const step = 1;
@@ -24,6 +25,8 @@ export default function App(){
       setStep(step + 1)
     }
     // step = step + 1;
+    // test.name = "Janu";
+    setTest({name: "janu"})
   }
 
   return <div className="steps">
@@ -36,6 +39,7 @@ export default function App(){
 
     <p className="msg">
       Step {step}: {messages[step-1]}
+      {test.name}
     </p>
 
     <div className="buttons">
